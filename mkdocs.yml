@@ -1,0 +1,149 @@
+site_name: ZenseAI.QI Cookbook
+site_description: Release hub and capability guide for the ZenseAI.QI AI-powered QE workflow
+site_author: Zensar QE CoE
+site_url: https://qe-coe.github.io/zenseaiqicookbook/
+copyright: "© 2026 Zensar QE CoE"
+
+repo_name: QE-CoE/zenseaiqicookbook
+repo_url: https://github.com/QE-CoE/zenseaiqicookbook
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.indexes
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - content.tooltips
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  font:
+    text: Inter
+    code: JetBrains Mono
+  icon:
+    repo: fontawesome/brands/github
+    logo: material/robot-industrial
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/QE-CoE
+  generator: false
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.caret
+  - pymdownx.tilde
+
+plugins:
+  - search
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      slide_effect: slide
+      width: 100%
+      height: auto
+      zoomable: true
+      draggable: true
+  - minify:
+      minify_html: true
+
+nav:
+  - Home: index.md
+  - What's New:
+      - releases/index.md
+      - May 2026: releases/2026-05.md
+      - April 2026: releases/2026-04.md
+      - March 2026: releases/2026-03.md
+  - Agents:
+      - agents/index.md
+      - Requirements & Specs:
+          - DeepSpeci: agents/deepspeci.md
+          - CaseGeni: agents/casegeni.md
+          - Test Reviewer: agents/test-reviewer.md
+      - Test Data & Automation:
+          - DataGeni: agents/datageni.md
+          - Auto-PlayPilot: agents/auto-playpilot.md
+          - Visual Detector: agents/visual-detector.md
+      - Quality Intelligence:
+          - Defect Intelligence: agents/defect-intelligence.md
+          - Predictive Intelligence: agents/predictive-intelligence.md
+          - Test Optimization: agents/test-optimization.md
+          - Knowledge Graph: agents/knowledge-graph.md
+      - Specialised:
+          - Secure-Xi: agents/secure-xi.md
+          - Perf-Xi: agents/perf-xi.md
+          - Game-Xi: agents/game-xi.md
+          - Accessibility: agents/accessibility.md
+          - Payments-Rail: agents/payments-rail.md
+          - RIA: agents/ria.md
+      - Platform:
+          - Knowledge Base: agents/knowledge-base.md
+  - Workflows:
+      - workflows/index.md
+      - End-to-end Pipeline: workflows/end-to-end.md
+      - Requirement → Test: workflows/requirement-to-test.md
+      - Exploratory: workflows/exploratory.md
+      - Regression: workflows/regression.md
+  - About:
+      - about/index.md
+      - Architecture: about/architecture.md
+      - Security: about/security.md
+      - FAQ: about/faq.md
