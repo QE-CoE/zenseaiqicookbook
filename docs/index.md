@@ -5,72 +5,73 @@ hide:
 ---
 
 <div class="hero" markdown>
-  <div class="hero__bg" aria-hidden="true"></div>
-  <div class="hero__inner" markdown>
 
-  <span class="eyebrow">Zensar QE CoE · Release Hub</span>
+<span class="eyebrow">Zensar QE CoE · Release Hub</span>
 
-  # ZenseAI.QI
+# ZenseAI.QI { .hero-title }
 
-  <p class="hero__lede">
-    AI-powered Quality Engineering. <b>12+ specialised agents</b>
-    orchestrated into one governed pipeline — from a raw requirement
-    to an executed, validated, defect-classified test run.
-  </p>
+AI-powered Quality Engineering. **12+ specialised agents** orchestrated into one governed pipeline — from a raw requirement to an executed, validated, defect-classified test run.
+{ .hero-lede }
 
-  <div class="hero__ctas">
-    <a href="releases/2026-05/" class="md-button md-button--primary">:material-rocket-launch: May 2026 release</a>
-    <a href="workflows/end-to-end/" class="md-button">:material-graph: See the pipeline</a>
-    <a href="agents/" class="md-button">:material-puzzle: Browse agents</a>
-  </div>
+[:material-rocket-launch: May 2026 release](releases/2026-05.md){ .md-button .md-button--primary }
+[:material-graph: See the pipeline](workflows/end-to-end.md){ .md-button }
+[:material-puzzle: Browse agents](agents/index.md){ .md-button }
+{ .hero-ctas }
 
-  <div class="badges">
-    <span class="badge"><span class="dot"></span> Multi-LLM routing</span>
-    <span class="badge"><span class="dot"></span> SSE streaming</span>
-    <span class="badge"><span class="dot"></span> Tenant-isolated</span>
-    <span class="badge"><span class="dot"></span> Self-hostable</span>
-    <span class="badge"><span class="dot"></span> OWASP-aligned</span>
-  </div>
+<span class="badge">:material-circle-medium: Multi-LLM routing</span>
+<span class="badge">:material-circle-medium: SSE streaming</span>
+<span class="badge">:material-circle-medium: Tenant-isolated</span>
+<span class="badge">:material-circle-medium: Self-hostable</span>
+<span class="badge">:material-circle-medium: OWASP-aligned</span>
+{ .badges }
 
-  </div>
 </div>
 
 <div class="stats" markdown>
-  <div class="stat"><span class="stat__num">12+</span><span class="stat__label">Specialised agents</span></div>
-  <div class="stat"><span class="stat__num">7</span><span class="stat__label">LLM providers routable</span></div>
-  <div class="stat"><span class="stat__num">SSE</span><span class="stat__label">Real-time streaming</span></div>
-  <div class="stat"><span class="stat__num">100%</span><span class="stat__label">AES-256-GCM secrets</span></div>
+<div class="stat"><span class="stat__num">12+</span><span class="stat__label">Specialised agents</span></div>
+<div class="stat"><span class="stat__num">7</span><span class="stat__label">LLM providers routable</span></div>
+<div class="stat"><span class="stat__num">SSE</span><span class="stat__label">Real-time streaming</span></div>
+<div class="stat"><span class="stat__num">AES-256</span><span class="stat__label">GCM-encrypted secrets</span></div>
 </div>
 
-<section class="band band--soft" markdown>
+<div class="band band--soft" markdown>
 
 ## One requirement in. A validated test run out. { .section-title }
 
-ZenseAI.QI is a unified, multi-tenant accelerator that walks a software requirement through **every quality stage** — clarification, test case generation, test data synthesis, script generation, execution, defect triage, performance and security validation — using purpose-built AI agents that talk to each other through a typed, validated pipeline.
+ZenseAI.QI is a unified, multi-tenant accelerator that walks a software requirement through **every quality stage** — clarification, test-case generation, test-data synthesis, script generation, execution, defect triage, performance and security validation — using purpose-built AI agents that talk to each other through a typed, validated pipeline.
+{ .section-lede }
 
 <div class="grid cards pillars" markdown>
 
-- :material-flash: **Faster cycle time**
+- :material-flash:{ .lg .middle } **Faster cycle time**
+
+    ---
 
     From requirement to executed regression in hours, not sprints. Agents pass typed outputs — no copy-paste between tools.
 
-- :material-shield-check: **Governed by design**
+- :material-shield-check:{ .lg .middle } **Governed by design**
+
+    ---
 
     AES-256-GCM secrets, JWT auth, row-level tenant isolation, OWASP-aligned hardening. Pipeline runs are auditable end-to-end.
 
-- :material-puzzle-plus: **Composable agents**
+- :material-puzzle-plus:{ .lg .middle } **Composable agents**
 
-    Pick the agents your project needs. Each one has its own UI, its own evidence, and a standard contract for upstream / downstream.
+    ---
 
-- :material-brain: **Bring your own LLM**
+    Pick the agents your project needs. Each has its own UI, evidence trail, and a standard contract for upstream / downstream.
+
+- :material-brain:{ .lg .middle } **Bring your own LLM**
+
+    ---
 
     Per-tenant routing across Gemini, OpenAI, Claude, Mistral, Ollama and more. Keys stay encrypted; raw secrets never reach the browser.
 
 </div>
 
-</section>
+</div>
 
-<section class="band" markdown>
+<div class="band" markdown>
 
 ## The pipeline at a glance { .section-title }
 
@@ -78,14 +79,14 @@ ZenseAI.QI is a unified, multi-tenant accelerator that walks a software requirem
 
 ```mermaid
 flowchart LR
-  R([Requirement]):::input --> DS[DeepSpeci<br/>refine + clarify]:::core
-  DS --> CG[CaseGeni<br/>test cases]:::core
-  CG --> DG[DataGeni<br/>test data]:::core
-  CG --> APP[Auto-PlayPilot<br/>scripts + run]:::core
-  APP --> DI[Defect Intelligence<br/>triage]:::quality
-  DI --> KG[Knowledge Graph<br/>traceability]:::quality
-  APP --> PI[Predictive<br/>risk hotspots]:::quality
-  APP --> TO[Test Optimization<br/>min subset]:::quality
+  R([Requirement]):::input --> DS[DeepSpeci]:::core
+  DS --> CG[CaseGeni]:::core
+  CG --> DG[DataGeni]:::core
+  CG --> APP[Auto-PlayPilot]:::core
+  APP --> DI[Defect Intelligence]:::quality
+  DI --> KG[Knowledge Graph]:::quality
+  APP --> PI[Predictive]:::quality
+  APP --> TO[Test Optimization]:::quality
 
   R -.-> SX[Secure-Xi]:::spec
   R -.-> PX[Perf-Xi]:::spec
@@ -94,168 +95,229 @@ flowchart LR
   R -.-> GX[Game-Xi]:::spec
 
   classDef input  fill:#FFF3E8,stroke:#C45412,stroke-width:2px,color:#C45412;
-  classDef core   fill:#F37021,stroke:#C45412,color:#fff,font-weight:bold;
+  classDef core   fill:#F37021,stroke:#C45412,color:#fff;
   classDef quality fill:#FFE0CC,stroke:#F37021,color:#C45412;
   classDef spec   fill:#FFFFFF,stroke:#F89561,color:#C45412,stroke-dasharray:4 3;
 ```
 
 </div>
 
-<p class="pipeline-caption">Solid arrows = mandatory dependencies. Dashed = independent specialised agents that attach anywhere in the flow.</p>
+<p class="pipeline-caption">Solid arrows = mandatory dependencies. Dashed = independent specialised agents.</p>
 
-<p class="band__cta">
-<a href="workflows/end-to-end/" class="md-button md-button--primary">Walk the full end-to-end workflow</a>
-<a href="about/architecture/" class="md-button">Read the architecture</a>
-</p>
+<div class="band__cta" markdown>
+[Walk the end-to-end workflow](workflows/end-to-end.md){ .md-button .md-button--primary }
+[Read the architecture](about/architecture.md){ .md-button }
+</div>
 
-</section>
+</div>
 
-<section class="band band--soft" markdown>
+<div class="band band--soft" markdown>
 
 ## What's new in May 2026 <span class="whatsnew">latest</span> { .section-title }
 
 <div class="grid cards news" markdown>
 
-- :material-check-decagram: **Pending-Review race fix**
+- :material-check-decagram:{ .lg .middle } **Pending-Review race fix**
+
+    ---
 
     Validated agent runs no longer flip back to *Pending Review* after navigation. Per-pipeline mirror now preserves `validated=true` against runId-matched hydration.
 
-- :material-file-document-edit: **Auto-PlayPilot label cleanup**
+- :material-file-document-edit:{ .lg .middle } **Auto-PlayPilot label cleanup**
 
-    *“Test Script Generation (Existing Framework)”* is now simply **Test Script Generation** — the mode covers both fresh scaffolding and existing-project uploads.
+    ---
 
-- :material-database-remove: **One run-report per generation**
+    *"Test Script Generation (Existing Framework)"* is now simply **Test Script Generation** — the mode covers fresh scaffolding and existing-project uploads.
 
-    Auto-PlayPilot’s `save-config` step no longer persists a phantom AgentOutput row — generate emits exactly one run report per click.
+- :material-database-remove:{ .lg .middle } **One run-report per generation**
 
-- :material-cog-sync: **Phase-3 backend canonical**
+    ---
+
+    Auto-PlayPilot's `save-config` step no longer persists a phantom AgentOutput row — generate emits exactly one run report per click.
+
+- :material-cog-sync:{ .lg .middle } **Phase-3 backend canonical**
+
+    ---
 
     `pipeline_runs` and `agent_outputs` are the single source of truth; the frontend localStorage layer is a hot cache that survives offline backend.
 
 </div>
 
-<p class="band__cta"><a href="releases/2026-05/" class="md-button md-button--primary">Read full May 2026 notes →</a></p>
+<div class="band__cta" markdown>
+[Read full May 2026 notes](releases/2026-05.md){ .md-button .md-button--primary }
+</div>
 
-</section>
+</div>
 
-<section class="band" markdown>
+<div class="band" markdown>
 
 ## The agent catalogue { .section-title }
 
-<h3 class="cat-heading"><span class="cat-pill cat-pill--req">Requirements &amp; Specs</span></h3>
+<div class="cat-row" markdown>
+
+<span class="cat-pill cat-pill--req">Requirements &amp; Specs</span>
 
 <div class="grid cards agents" markdown>
 
-- :material-clipboard-text-search: **[DeepSpeci](agents/deepspeci.md)**
+- :material-clipboard-text-search:{ .lg .middle } **[DeepSpeci](agents/deepspeci.md)**
+
+    ---
 
     Turns ambiguous requirements into refined user stories with clarifying questions surfaced.
 
-- :material-format-list-checks: **[CaseGeni](agents/casegeni.md)**
+- :material-format-list-checks:{ .lg .middle } **[CaseGeni](agents/casegeni.md)**
+
+    ---
 
     Generates structured positive, negative and edge-case tests from refined stories.
 
-- :material-account-supervisor: **[Test Reviewer](agents/test-reviewer.md)**
+- :material-account-supervisor:{ .lg .middle } **[Test Reviewer](agents/test-reviewer.md)**
+
+    ---
 
     Reviews and scores generated test cases for quality, completeness and risk.
 
-- :material-account-tie-voice: **[RIA](agents/ria.md)**
+- :material-account-tie-voice:{ .lg .middle } **[RIA](agents/ria.md)**
+
+    ---
 
     Requirements Intelligence Assistant — conversational requirement intake.
 
 </div>
 
-<h3 class="cat-heading"><span class="cat-pill cat-pill--auto">Test Data &amp; Automation</span></h3>
+</div>
+
+<div class="cat-row" markdown>
+
+<span class="cat-pill cat-pill--auto">Test Data &amp; Automation</span>
 
 <div class="grid cards agents" markdown>
 
-- :material-database-cog: **[DataGeni](agents/datageni.md)**
+- :material-database-cog:{ .lg .middle } **[DataGeni](agents/datageni.md)**
 
-    Synthesises rule-compliant test data from a test case set.
+    ---
 
-- :material-robot-happy: **[Auto-PlayPilot](agents/auto-playpilot.md)**
+    Synthesises rule-compliant test data from a test-case set.
 
-    Generates Playwright / Cypress scripts and runs them headlessly via MCP — fresh scaffolding or into an existing project.
+- :material-robot-happy:{ .lg .middle } **[Auto-PlayPilot](agents/auto-playpilot.md)**
 
-- :material-eye-check: **[Visual Detector](agents/visual-detector.md)**
+    ---
+
+    Generates Playwright / Cypress scripts and runs them headlessly via MCP.
+
+- :material-eye-check:{ .lg .middle } **[Visual Detector](agents/visual-detector.md)**
+
+    ---
 
     Pixel and layout drift detection across builds.
 
 </div>
 
-<h3 class="cat-heading"><span class="cat-pill cat-pill--qi">Quality Intelligence</span></h3>
+</div>
+
+<div class="cat-row" markdown>
+
+<span class="cat-pill cat-pill--qi">Quality Intelligence</span>
 
 <div class="grid cards agents" markdown>
 
-- :material-bug-check: **[Defect Intelligence](agents/defect-intelligence.md)**
+- :material-bug-check:{ .lg .middle } **[Defect Intelligence](agents/defect-intelligence.md)**
+
+    ---
 
     Classifies failed runs, clusters duplicates, suggests root cause.
 
-- :material-chart-bell-curve: **[Predictive Intelligence](agents/predictive-intelligence.md)**
+- :material-chart-bell-curve:{ .lg .middle } **[Predictive Intelligence](agents/predictive-intelligence.md)**
+
+    ---
 
     Flags risky modules from churn + failure history before tests run.
 
-- :material-tune-variant: **[Test Optimization](agents/test-optimization.md)**
+- :material-tune-variant:{ .lg .middle } **[Test Optimization](agents/test-optimization.md)**
+
+    ---
 
     Selects the minimum test subset that retains coverage for a code change.
 
-- :material-graph: **[Knowledge Graph](agents/knowledge-graph.md)**
+- :material-graph:{ .lg .middle } **[Knowledge Graph](agents/knowledge-graph.md)**
+
+    ---
 
     Builds traceability between requirements, tests, defects and code.
 
 </div>
 
-<h3 class="cat-heading"><span class="cat-pill cat-pill--spec">Specialised Validators</span></h3>
+</div>
+
+<div class="cat-row" markdown>
+
+<span class="cat-pill cat-pill--spec">Specialised Validators</span>
 
 <div class="grid cards agents" markdown>
 
-- :material-shield-lock: **[Secure-Xi](agents/secure-xi.md)**
+- :material-shield-lock:{ .lg .middle } **[Secure-Xi](agents/secure-xi.md)**
+
+    ---
 
     OWASP / ASVS scan with AI-driven exploit reasoning.
 
-- :material-speedometer: **[Perf-Xi](agents/perf-xi.md)**
+- :material-speedometer:{ .lg .middle } **[Perf-Xi](agents/perf-xi.md)**
+
+    ---
 
     Load-test plan synthesis and bottleneck explanation.
 
-- :material-gamepad-variant: **[Game-Xi](agents/game-xi.md)**
+- :material-gamepad-variant:{ .lg .middle } **[Game-Xi](agents/game-xi.md)**
+
+    ---
 
     Game-flow and rule-coverage validator.
 
-- :material-human-wheelchair: **[Accessibility](agents/accessibility.md)**
+- :material-human-wheelchair:{ .lg .middle } **[Accessibility](agents/accessibility.md)**
+
+    ---
 
     axe-core audit with AI remediation guidance.
 
-- :material-credit-card-check: **[Payments-Rail](agents/payments-rail.md)**
+- :material-credit-card-check:{ .lg .middle } **[Payments-Rail](agents/payments-rail.md)**
+
+    ---
 
     Payment-spec validation (ISO20022, card schemes).
 
 </div>
 
-<h3 class="cat-heading"><span class="cat-pill cat-pill--plat">Platform</span></h3>
+</div>
+
+<div class="cat-row" markdown>
+
+<span class="cat-pill cat-pill--plat">Platform</span>
 
 <div class="grid cards agents" markdown>
 
-- :material-book-open-page-variant: **[Knowledge Base](agents/knowledge-base.md)**
+- :material-book-open-page-variant:{ .lg .middle } **[Knowledge Base](agents/knowledge-base.md)**
+
+    ---
 
     pgvector-backed RAG store every agent reads from.
 
 </div>
 
-</section>
+</div>
 
-<section class="cta-band" markdown>
+</div>
 
-<div class="cta-band__inner" markdown>
+<div class="cta-band" markdown>
 
 ## Ready to put it to work? { .section-title }
 
 Explore the workflows your team will run most often, then drill into the agents that power each step.
+{ .section-lede }
 
-<div class="hero__ctas">
-  <a href="workflows/requirement-to-test/" class="md-button md-button--primary">Requirement → Test</a>
-  <a href="workflows/regression/" class="md-button md-button--primary">Regression</a>
-  <a href="workflows/exploratory/" class="md-button md-button--primary">Exploratory</a>
-  <a href="about/architecture/" class="md-button">Architecture deep-dive</a>
-</div>
+[Requirement → Test](workflows/requirement-to-test.md){ .md-button .md-button--primary }
+[Regression](workflows/regression.md){ .md-button .md-button--primary }
+[Exploratory](workflows/exploratory.md){ .md-button .md-button--primary }
+[Architecture deep-dive](about/architecture.md){ .md-button }
+{ .hero-ctas }
 
 </div>
-</section>
