@@ -10,10 +10,10 @@ hide:
 
 # ZenseAI.QI { .hero-title }
 
-AI-powered Quality Engineering. **12+ specialised agents** orchestrated into one governed pipeline — from a raw requirement to an executed, validated, defect-classified test run.
+AI-powered Quality Engineering. **19 specialised agents** orchestrated into one governed pipeline — from a raw requirement to an executed, validated, defect-classified test run.
 { .hero-lede }
 
-[:material-rocket-launch: May 2026 release](releases/2026-05.md){ .md-button .md-button--primary }
+[:material-rocket-launch: July 2026 release](releases/2026-07.md){ .md-button .md-button--primary }
 [:material-graph: See the pipeline](workflows/end-to-end.md){ .md-button }
 [:material-puzzle: Browse agents](agents/index.md){ .md-button }
 { .hero-ctas }
@@ -28,9 +28,9 @@ AI-powered Quality Engineering. **12+ specialised agents** orchestrated into one
 </div>
 
 <div class="stats" markdown>
-<div class="stat"><span class="stat__num">12+</span><span class="stat__label">Specialised agents</span></div>
-<div class="stat"><span class="stat__num">7</span><span class="stat__label">LLM providers routable</span></div>
-<div class="stat"><span class="stat__num">SSE</span><span class="stat__label">Real-time streaming</span></div>
+<div class="stat"><span class="stat__num">19</span><span class="stat__label">Specialised agents</span></div>
+<div class="stat"><span class="stat__num">36</span><span class="stat__label">Pipeline templates</span></div>
+<div class="stat"><span class="stat__num">21</span><span class="stat__label">Tool integrations</span></div>
 <div class="stat"><span class="stat__num">AES-256</span><span class="stat__label">GCM-encrypted secrets</span></div>
 </div>
 
@@ -65,7 +65,7 @@ ZenseAI.QI is a unified, multi-tenant accelerator that walks a software requirem
 
     ---
 
-    Per-tenant routing across Gemini, OpenAI, Claude, Mistral, Ollama and more. Keys stay encrypted; raw secrets never reach the browser.
+    Per-tenant routing across Gemini, OpenAI, Claude and Azure AI Foundry. Keys stay encrypted; raw secrets never reach the browser.
 
 </div>
 
@@ -85,6 +85,7 @@ flowchart LR
   CG --> APP[Auto-PlayPilot]:::core
   APP --> DI[Defect Intelligence]:::quality
   DI --> KG[Knowledge Graph]:::quality
+  KG --> IA[Impact Analyzer]:::quality
   APP --> PI[Predictive]:::quality
   APP --> TO[Test Optimization]:::quality
 
@@ -93,6 +94,8 @@ flowchart LR
   R -.-> AC[Accessibility]:::spec
   R -.-> PR[Payments-Rail]:::spec
   R -.-> GX[Game-Xi]:::spec
+  R -.-> VX[Visual Xi]:::spec
+  R -.-> DP[DocuProof]:::spec
 
   classDef input  fill:#FFF3E8,stroke:#C45412,stroke-width:2px,color:#C45412;
   classDef core   fill:#F37021,stroke:#C45412,color:#fff;
@@ -113,38 +116,38 @@ flowchart LR
 
 <div class="band band--soft" markdown>
 
-## What's new in May 2026 <span class="whatsnew">latest</span> { .section-title }
+## What's new in July 2026 <span class="whatsnew">latest</span> { .section-title }
 
 <div class="grid cards news" markdown>
 
-- :material-check-decagram:{ .lg .middle } **Pending-Review race fix**
+- :material-file-tree:{ .lg .middle } **DeepSpeci v2**
 
     ---
 
-    Validated agent runs no longer flip back to *Pending Review* after navigation. Per-pipeline mirror now preserves `validated=true` against runId-matched hydration.
+    Document-type classification, Technical Specification decomposition, Jira/qTest migration and a multimodal pipeline — specifications become a story backlog.
 
-- :material-file-document-edit:{ .lg .middle } **Auto-PlayPilot label cleanup**
-
-    ---
-
-    *"Test Script Generation (Existing Framework)"* is now simply **Test Script Generation** — the mode covers fresh scaffolding and existing-project uploads.
-
-- :material-database-remove:{ .lg .middle } **One run-report per generation**
+- :material-radar:{ .lg .middle } **Anomaly Detection Engine**
 
     ---
 
-    Auto-PlayPilot's `save-config` step no longer persists a phantom AgentOutput row — generate emits exactly one run report per click.
+    Perf-Xi gains a third mode: ingest results, APM and infra metrics for correlated root-cause analysis, prioritised recommendations and a health score.
 
-- :material-cog-sync:{ .lg .middle } **Phase-3 backend canonical**
+- :material-record-circle:{ .lg .middle } **Perf-Xi Recording Studio**
 
     ---
 
-    `pipeline_runs` and `agent_outputs` are the single source of truth; the frontend localStorage layer is a hot cache that survives offline backend.
+    Capture a live user journey directly and convert it into a JMeter, k6, Gatling or Locust script bundle.
+
+- :material-format-list-checks:{ .lg .middle } **CaseGeni test-design uplift**
+
+    ---
+
+    Step-specific expected results, configurable story and AC limits, ADA test cases, and Excel/CSV exports that survive contact with a spreadsheet.
 
 </div>
 
 <div class="band__cta" markdown>
-[Read full May 2026 notes](releases/2026-05.md){ .md-button .md-button--primary }
+[Read full July 2026 notes](releases/2026-07.md){ .md-button .md-button--primary }
 </div>
 
 </div>
@@ -175,13 +178,13 @@ flowchart LR
 
     ---
 
-    Reviews and scores generated test cases for quality, completeness and risk.
+    Applies sector policy packs — REST API, BFSI, HIPAA — and flags coverage gaps before automation.
 
 - :material-account-tie-voice:{ .lg .middle } **[RIA](agents/ria.md)**
 
     ---
 
-    Requirements Intelligence Assistant — conversational requirement intake.
+    ZenRia — in-app assistant for platform guidance and conversational requirement intake.
 
 </div>
 
@@ -197,19 +200,19 @@ flowchart LR
 
     ---
 
-    Synthesises rule-compliant test data from a test-case set.
+    Synthesises rule-compliant test data with foreign-key integrity across entities.
 
 - :material-robot-happy:{ .lg .middle } **[Auto-PlayPilot](agents/auto-playpilot.md)**
 
     ---
 
-    Generates Playwright / Cypress scripts and runs them headlessly via MCP.
+    Scaffolds frameworks, generates scripts, and executes them against a live application.
 
-- :material-eye-check:{ .lg .middle } **[Visual Detector](agents/visual-detector.md)**
+- :material-eye-check:{ .lg .middle } **[Visual Xi](agents/visual-detector.md)**
 
     ---
 
-    Pixel and layout drift detection across builds.
+    Compares Figma designs against the live site and scores design compliance.
 
 </div>
 
@@ -231,19 +234,25 @@ flowchart LR
 
     ---
 
-    Flags risky modules from churn + failure history before tests run.
+    Predicts pass, fail or inconclusive before execution — and whether to run, defer or refine.
 
 - :material-tune-variant:{ .lg .middle } **[Test Optimization](agents/test-optimization.md)**
 
     ---
 
-    Selects the minimum test subset that retains coverage for a code change.
+    Finds redundancy in an existing suite and merges duplicates without losing coverage.
 
 - :material-graph:{ .lg .middle } **[Knowledge Graph](agents/knowledge-graph.md)**
 
     ---
 
-    Builds traceability between requirements, tests, defects and code.
+    Neo4j-backed traceability across capabilities, stories, tests and defects.
+
+- :material-source-branch-sync:{ .lg .middle } **[Impact Analyzer](agents/impact-analyzer.md)**
+
+    ---
+
+    Turns a change request into ranked impacted tests, coverage gaps and new tests.
 
 </div>
 
@@ -271,19 +280,25 @@ flowchart LR
 
     ---
 
-    Game-flow and rule-coverage validator.
+    Game accessibility against Xbox (XAG), industry (GAG) and IARC rating standards.
 
-- :material-human-wheelchair:{ .lg .middle } **[Accessibility](agents/accessibility.md)**
-
-    ---
-
-    axe-core audit with AI remediation guidance.
-
-- :material-credit-card-check:{ .lg .middle } **[Payments-Rail](agents/payments-rail.md)**
+- :material-human-wheelchair:{ .lg .middle } **[Accessibility Intelligence](agents/accessibility.md)**
 
     ---
 
-    Payment-spec validation (ISO20022, card schemes).
+    Site-wide axe-core audit with AI remediation guidance.
+
+- :material-credit-card-check:{ .lg .middle } **[Payments Rail QE](agents/payments-rail.md)**
+
+    ---
+
+    Rail-aware scenarios for ACH, FedNow, SWIFT and ISO 20022, with compliance packs.
+
+- :material-file-compare:{ .lg .middle } **[DocuProof](agents/pdf-validator.md)**
+
+    ---
+
+    PDF comparison with smart exclusions for dates, prices and IDs.
 
 </div>
 
@@ -299,7 +314,13 @@ flowchart LR
 
     ---
 
-    pgvector-backed RAG store every agent reads from.
+    pgvector-backed RAG store every agent reads from, with Jira, Confluence and GitHub connectors.
+
+- :material-chart-box:{ .lg .middle } **[Insights360](agents/insights360.md)**
+
+    ---
+
+    Quality trends, agent adoption and pipeline efficiency across the lifecycle.
 
 </div>
 

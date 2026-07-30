@@ -109,6 +109,8 @@ nav:
   - Home: index.md
   - What's New:
       - releases/index.md
+      - July 2026: releases/2026-07.md
+      - June 2026: releases/2026-06.md
       - May 2026: releases/2026-05.md
       - April 2026: releases/2026-04.md
       - March 2026: releases/2026-03.md
@@ -121,21 +123,24 @@ nav:
       - Test Data & Automation:
           - DataGeni: agents/datageni.md
           - Auto-PlayPilot: agents/auto-playpilot.md
-          - Visual Detector: agents/visual-detector.md
+          - Visual Xi: agents/visual-detector.md
       - Quality Intelligence:
           - Defect Intelligence: agents/defect-intelligence.md
           - Predictive Intelligence: agents/predictive-intelligence.md
           - Test Optimization: agents/test-optimization.md
           - Knowledge Graph: agents/knowledge-graph.md
+          - Impact Analyzer: agents/impact-analyzer.md
       - Specialised:
           - Secure-Xi: agents/secure-xi.md
           - Perf-Xi: agents/perf-xi.md
           - Game-Xi: agents/game-xi.md
-          - Accessibility: agents/accessibility.md
-          - Payments-Rail: agents/payments-rail.md
+          - Accessibility Intelligence: agents/accessibility.md
+          - Payments Rail QE: agents/payments-rail.md
+          - DocuProof: agents/pdf-validator.md
           - RIA: agents/ria.md
       - Platform:
           - Knowledge Base: agents/knowledge-base.md
+          - Insights360: agents/insights360.md
   - Workflows:
       - workflows/index.md
       - End-to-end Pipeline: workflows/end-to-end.md

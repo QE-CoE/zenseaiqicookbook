@@ -8,7 +8,7 @@ flowchart LR
   DS --> CG[CaseGeni]
   CG --> TR[Test Reviewer]
   TR --> APP[Auto-PlayPilot]
-  APP --> EXE[Execution]
+  APP --> EXE[Test Execution]
   EXE --> DI[Defect Intelligence]
   DI --> KG[Knowledge Graph]
 ```
@@ -17,11 +17,15 @@ flowchart LR
 
 1. **DeepSpeci** — paste/upload the requirement, validate the refined stories
 2. **CaseGeni** — generate test cases, validate
-3. **Test Reviewer** — optional but recommended quality gate
+3. **Test Reviewer** — optional but recommended quality gate; applies your sector's policy packs
 4. **Auto-PlayPilot — Test Script Generation** — generate against your existing framework
-5. **Auto-PlayPilot — Execution** — run headlessly via MCP
+5. **Auto-PlayPilot — Test Execution** — run against a live application, headed or headless
 6. **Defect Intelligence** — classify any failures
 7. **Knowledge Graph** — auto-link everything for traceability
+
+**Test Execution** is included in the shipped End-to-End QA Pipeline template as of June 2026, so the run and its report are part of the pipeline rather than a separate step.
+
+Once the Knowledge Graph is built, [Impact Analyzer](../agents/impact-analyzer.md) can answer change-impact questions against everything this pipeline produced.
 
 ## Validation gates
 

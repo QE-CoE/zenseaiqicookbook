@@ -1,6 +1,6 @@
 # Agents
 
-ZenseAI.QI ships 12+ specialised AI agents, each addressing one slice of the QE lifecycle. Agents are **independent services** behind the Common Backend — you compose them into pipelines as you need.
+ZenseAI.QI ships 19 specialised AI agents, each addressing one slice of the QE lifecycle. Agents are **independent services** behind the Common Backend — you compose them into pipelines as you need.
 
 ## By stage
 
@@ -8,10 +8,23 @@ ZenseAI.QI ships 12+ specialised AI agents, each addressing one slice of the QE 
 |---|---|
 | **Requirements & Specs** | [DeepSpeci](deepspeci.md) · [RIA](ria.md) · [Test Reviewer](test-reviewer.md) |
 | **Test Design** | [CaseGeni](casegeni.md) · [DataGeni](datageni.md) |
-| **Automation** | [Auto-PlayPilot](auto-playpilot.md) · [Visual Detector](visual-detector.md) |
-| **Quality Intelligence** | [Defect Intelligence](defect-intelligence.md) · [Predictive Intelligence](predictive-intelligence.md) · [Test Optimization](test-optimization.md) · [Knowledge Graph](knowledge-graph.md) |
-| **Specialised** | [Secure-Xi](secure-xi.md) · [Perf-Xi](perf-xi.md) · [Game-Xi](game-xi.md) · [Accessibility](accessibility.md) · [Payments-Rail](payments-rail.md) |
-| **Platform** | [Knowledge Base](knowledge-base.md) |
+| **Automation** | [Auto-PlayPilot](auto-playpilot.md) · [Visual Xi](visual-detector.md) |
+| **Quality Intelligence** | [Defect Intelligence](defect-intelligence.md) · [Predictive Intelligence](predictive-intelligence.md) · [Test Optimization](test-optimization.md) · [Knowledge Graph](knowledge-graph.md) · [Impact Analyzer](impact-analyzer.md) |
+| **Specialised** | [Secure-Xi](secure-xi.md) · [Perf-Xi](perf-xi.md) · [Game-Xi](game-xi.md) · [Accessibility Intelligence](accessibility.md) · [Payments Rail QE](payments-rail.md) · [DocuProof](pdf-validator.md) |
+| **Platform** | [Knowledge Base](knowledge-base.md) · [Insights360](insights360.md) |
+
+## By persona
+
+The agent catalogue can be filtered by role, so each team member sees the capabilities relevant to them.
+
+| Persona | Typical agents |
+|---|---|
+| **Product Owner** | DeepSpeci · Knowledge Graph · Impact Analyzer |
+| **Business Analyst** | DeepSpeci · CaseGeni · Payments Rail QE · Knowledge Graph · Accessibility Intelligence |
+| **Test Analyst** | CaseGeni · DataGeni · Test Reviewer · Defect Intelligence · Test Optimization · DocuProof |
+| **Automation Engineer** | Auto-PlayPilot · DataGeni · Visual Xi · Predictive Intelligence |
+| **Security Engineer** | Secure-Xi |
+| **Performance Engineer** | Perf-Xi |
 
 ## Dependency graph
 
@@ -25,13 +38,15 @@ flowchart LR
   CG --> TR[Test Reviewer]
   APP --> DI[Defect Intelligence]
   DI --> KG[Knowledge Graph]
+  KG --> IA[Impact Analyzer]
 
   SX[Secure-Xi]:::std
   PX[Perf-Xi]:::std
   GX[Game-Xi]:::std
   AC[Accessibility]:::std
   PR[Payments-Rail]:::std
-  VD[Visual Detector]:::std
+  VD[Visual Xi]:::std
+  DP[DocuProof]:::std
   classDef std fill:#FFF3E8,stroke:#F37021,color:#C45412
 ```
 
@@ -44,5 +59,7 @@ Every agent exposes:
 - **`POST /process/stream` (or `/generate/stream`)** — Server-Sent Events with `progress`, `stage`, `complete`, `error`
 - **`GET /health`** — liveness probe
 - **Per-tenant LLM injection** — the Common Backend resolves and decrypts API keys per-request; raw keys never reach the agent process from the browser
+
+Agents with several modes — Auto-PlayPilot, Perf-Xi, Visual Xi, Payments Rail QE — expose each mode as a named sub-route the workspace selects at run time.
 
 See [Architecture](../about/architecture.md) for the full request flow.
