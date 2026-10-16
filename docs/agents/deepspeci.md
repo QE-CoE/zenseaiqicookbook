@@ -79,6 +79,8 @@ Typical use:
 
 ## What's new
 
+- **September 2026** — Figma connector on Export, file-path mode and pasted-image upload, document-type detection, signed score deltas on the quality dashboards.
+- **August 2026** — Coverage uplift: structure recovered from unbulleted pastes, acceptance-criteria budget scaled to source complexity, every figure in the source preserved, line-level gap detection. Cross-project Jira push; Jira descriptions kept separate from acceptance criteria.
 - **July 2026** — **v2**: document-type classification, Technical Specification decomposition, Jira/qTest migration, multimodal pipeline, unified integration experience and Requirements Traceability Matrix. Global Knowledge Base grounding with source locking and cancellable extraction. Security hardening with pipeline state retention.
 - **May 2026** — Streaming stage names made human-readable; "tool_call" → "Extracting actors", etc.
 - **April 2026** — DOCX upload supported.

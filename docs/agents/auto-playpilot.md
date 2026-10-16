@@ -69,6 +69,8 @@ Typical use:
 
 ## What's new
 
+- **September 2026** — **API test automation**: choose Web UI, API or both. API specifications (JSON/YAML) now reach the generator — previously every API test fell back to a generic template. Combined frameworks: Selenium + Rest Assured (Java) and Playwright UI + API (JS/TS), with each test case routed to the UI suite, the API suite or both. Rest Assured supports Cucumber BDD. **Readable Report** for non-technical readers. Selenium Java generates page objects, merging same-named classes. **Fixed**: self-heal retries never matched and falsely reported "Recovered"; embedded Playwright report restored.
+- **August 2026** — **Playwright Java with Cucumber BDD** (Maven project, hooks, step definitions, inline Cucumber report). The UI blocks Playwright + Java without BDD.
 - **July 2026** — Framework generation and pipeline configuration corrected; sample repository configuration loads properly; test-execution fixes.
 - **June 2026** — Test Execution added to the End-to-End QA Pipeline template; single-select test type and uniform mobile configuration UI; browser dependencies pre-installed at generation time so runs no longer stall on downloads. **Fixed**: execution runs no longer overwrite generation output, and phantom pipeline runs are gone.
 - **May 2026** — "Test Script Generation (Existing Framework)" label simplified to **"Test Script Generation"**; description clarifies it covers fresh frameworks and existing-project uploads.

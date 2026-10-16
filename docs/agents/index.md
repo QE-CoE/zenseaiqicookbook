@@ -11,6 +11,7 @@ ZenseAI.QI ships 19 specialised AI agents, each addressing one slice of the QE l
 | **Automation** | [Auto-PlayPilot](auto-playpilot.md) · [Visual Xi](visual-detector.md) |
 | **Quality Intelligence** | [Defect Intelligence](defect-intelligence.md) · [Predictive Intelligence](predictive-intelligence.md) · [Test Optimization](test-optimization.md) · [Knowledge Graph](knowledge-graph.md) · [Impact Analyzer](impact-analyzer.md) |
 | **Specialised** | [Secure-Xi](secure-xi.md) · [Perf-Xi](perf-xi.md) · [Game-Xi](game-xi.md) · [Accessibility Intelligence](accessibility.md) · [Payments Rail QE](payments-rail.md) · [DocuProof](pdf-validator.md) |
+| **Developer tooling** | [Vantage](vantage.md) *(dev-only, not deployed, not counted above)* |
 | **Platform** | [Knowledge Base](knowledge-base.md) · [Insights360](insights360.md) |
 
 ## By persona

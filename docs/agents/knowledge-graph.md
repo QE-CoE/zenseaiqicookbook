@@ -67,11 +67,11 @@ Available as an agent workspace, and through the **Knowledge Base** explorer for
 
 ## Setup
 
-Graph persistence requires **Neo4j**, provisioned as a Podman container by `install.sh`:
+Graph persistence requires **Neo4j**, installed natively by `install.sh` (Neo4j 5 Community):
 
 ```bash
-# Neo4j runs as the `zenseai-neo4j` container on bolt://localhost:7687
-bash scripts/neo4j-podman-setup.sh start
+# Neo4j listens on bolt://localhost:7687
+bash scripts/neo4j-setup.sh start
 ```
 
 ## Tips
@@ -82,6 +82,7 @@ bash scripts/neo4j-podman-setup.sh start
 
 ## What's new
 
+- **August 2026** — Integrated with the Guidewire RAG through the Azure AI Search connector; user-story IDs in differing formats resolve correctly.
 - **July 2026** — Business-capability relations, acceptance criteria, business rules and impact paths corrected; duplicate graph generation and redundant writes removed; Neo4j memory raised for larger graphs.
 - **June 2026** — Rebuilt on Neo4j with the enterprise knowledge model; defect and test-case relations, module identification and isolated-node handling added.
 

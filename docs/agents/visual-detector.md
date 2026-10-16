@@ -72,6 +72,8 @@ Visual Xi requires a **Figma** integration to read design references. Add it on 
 
 ## What's new
 
+- **September 2026** — Deterministic element matching with a confidence floor; real width, height, typography and colour checks; causes reported instead of symptoms; image-content scoring; Adjust Image for realigning displaced sections; ignore regions scoped per run; sector sample presets; readable error codes.
+- **August 2026** — Ported into the platform and wired into pipelines.
 - **June 2026** — Full workflow shipped: Visual Eyes comparison modes, AI analysis with CSS suggestions, accessibility audit, link health, batch runs, Excel import, ignore regions and cloud device execution. Cloud-device runs now fail clearly instead of hanging when a session never starts.
 
 [← Back to agents](index.md)

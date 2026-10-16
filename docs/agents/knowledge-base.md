@@ -45,11 +45,11 @@ Typical use:
 
 ## Setup
 
-The Knowledge Base requires PostgreSQL with pgvector, provisioned by `install.sh` as a Podman container (`zenseai-knowledge-db`, port 5433).
+The Knowledge Base requires PostgreSQL with pgvector, installed natively by `install.sh`. The `zenseai_knowledge` database lives on the same PostgreSQL server as the platform database (port 5432).
 
 ```bash
 # Knowledge Base requires PostgreSQL + pgvector.
-# install.sh provisions both via Podman.
+# install.sh provisions both natively.
 cd agents/knowledge && .venv/bin/uvicorn main:app --host 0.0.0.0 --port 8009 --reload
 ```
 
@@ -61,6 +61,7 @@ cd agents/knowledge && .venv/bin/uvicorn main:app --host 0.0.0.0 --port 8009 --r
 
 ## What's new
 
+- **August 2026** — Restore no longer depends on database ownership and fails loudly; pasted credentials with trailing whitespace no longer look like a network outage. Now on native PostgreSQL (port 5432).
 - **July 2026** — Word document uploads unblocked with clearer error reporting; Azure AI Search connector context available to ZenRia.
 - **June 2026** — Payments-aware chunking; LLM-assisted document ingestion; embeddings normalised to the storage dimension (3072); Jira, Confluence and Guidewire Azure AI Search connectors; upload classification and coverage reporting corrected.
 

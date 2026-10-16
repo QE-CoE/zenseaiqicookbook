@@ -47,6 +47,7 @@ The business outcome is fewer findings escalating to a formal assessment, and re
 
 ## What's new
 
+- **August 2026** — Bearer tokens masked; shared SSRF and target allow-list checks; ZAP API key required; session state encrypted; report downloads bound to the owning tenant's run.
 - **June 2026** — Guidewire OpenAPI loader added for insurance estates.
 
 [← Back to agents](index.md)
