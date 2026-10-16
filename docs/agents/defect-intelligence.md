@@ -46,4 +46,9 @@ The business outcome is triage effort cut substantially, and release decisions m
 - **Feed it the Auto-PlayPilot run report directly** — the normalised summary carries the detail clustering depends on.
 - **Validate the output** to pass clustered failures downstream to [Knowledge Graph](knowledge-graph.md) for traceability.
 
+## What's new
+
+- **September–October 2026** — Tracker and project picker on the manual and pipeline input screens (the chosen tracker is saved with the run); defect-sync status reads and transitions require ownership, with rate limiting.
+- **August 2026** — Scoring, story-ID and defect-ID mapping, prioritised test plan ordering and gap counts corrected; Jira bug-ticket workflow updated; auto-ingested lessons-learned knowledge base scoped to BFSI.
+
 [← Back to agents](index.md)

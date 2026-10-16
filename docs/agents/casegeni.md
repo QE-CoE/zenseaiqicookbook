@@ -59,6 +59,7 @@ Manually authoring 60+ test cases for a single story takes a tester 2-3 hours. C
 
 ## What's new
 
+- **August 2026** — qTest push with per-step expected results and a module-tree picker; accessibility treated as a non-functional scenario type with security-level risk weight; precondition and gap fixes.
 - **July 2026** — Expected results for every test step; test-case display reorganised into distinct sections; configurable story and acceptance-criteria limits; accessibility (ADA) test cases; scenario-type classification and corrected traceability; Excel and CSV export fixes (separate step/expected-result columns, text wrapping, column widths, junk characters removed).
 - **June 2026** — Knowledge Base retrieval for domain-grounded generation; Guidewire test generation; export/import round-trip and special-character handling corrected.
 - **April 2026** — Edge case heuristics improved (boundary detection on numeric ranges).

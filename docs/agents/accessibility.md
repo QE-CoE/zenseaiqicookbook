@@ -4,7 +4,7 @@
 
 | | |
 |---|---|
-| **Port** | `8005` |
+| **Port** | `8016` |
 | **Stack** | Node · Express · axe-core |
 | **Stage** | Specialised — independent |
 | **Source** | `agents/Accessibility/` |
@@ -51,6 +51,7 @@ The business outcome is reduced legal and procurement risk, a usable product for
 
 ## What's new
 
+- **August 2026** — Port moved from `8005` to `8016`.
 - **July 2026** — Enabled for the BFSI sector by default; raised proxy timeout for deep crawls; report downloads forwarded correctly.
 - **April 2026** — Polished dashboard generator (`write-polished-dashboard.js`).
 - **March 2026** — AI remediation engine (`ai-remediation.js`) using the per-tenant LLM config.

@@ -65,6 +65,7 @@ The business outcome is testers unblocked in minutes rather than days, and one l
 
 ## What's new
 
+- **September 2026** — Guidewire vocabulary and Knowledge Base payload discovery; generated rows show their source test case.
 - **July 2026** — CaseGeni CSV/Excel uploads accepted with improved schema inference; foreign-key integrity enforced across generated entities; generation stream kept alive through slow model responses; explicit `null` constraints treated as missing.
 - **June 2026** — Source selector for standalone launches, Connection Manager for reusable database connections, per-card URLs and clearer navigation.
 

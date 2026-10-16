@@ -57,6 +57,7 @@ The business outcome is a smaller, faster, cheaper-to-maintain suite with covera
 
 ## What's new
 
+- **August 2026** — Guided flow (Upload, Overview, Duplicate, Similar, Optimized, Traceability); AI rewrite of weak tests; optional semantic similarity (up to 600 tests); `.xlsx` and CSV uploads only.
 - **July 2026** — Reduction logic corrected so coverage retention is reported accurately.
 
 [← Back to agents](index.md)

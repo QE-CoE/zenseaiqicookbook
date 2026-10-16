@@ -13,7 +13,7 @@ hide:
 AI-powered Quality Engineering. **19 specialised agents** orchestrated into one governed pipeline — from a raw requirement to an executed, validated, defect-classified test run.
 { .hero-lede }
 
-[:material-rocket-launch: July 2026 release](releases/2026-07.md){ .md-button .md-button--primary }
+[:material-rocket-launch: October 2026 release](releases/2026-10.md){ .md-button .md-button--primary }
 [:material-graph: See the pipeline](workflows/end-to-end.md){ .md-button }
 [:material-puzzle: Browse agents](agents/index.md){ .md-button }
 { .hero-ctas }
@@ -116,38 +116,52 @@ flowchart LR
 
 <div class="band band--soft" markdown>
 
-## What's new in July 2026 <span class="whatsnew">latest</span> { .section-title }
+## What's new — August to October 2026 <span class="whatsnew">latest</span> { .section-title }
 
 <div class="grid cards news" markdown>
 
-- :material-file-tree:{ .lg .middle } **DeepSpeci v2**
+- :material-compare:{ .lg .middle } **Impact Analyzer: KB Compare and Compare PR**
 
     ---
 
-    Document-type classification, Technical Specification decomposition, Jira/qTest migration and a multimodal pipeline — specifications become a story backlog.
+    Reverse-engineer an application and its automation repo into knowledge graphs and compare coverage, or check a change request against its PR — documented, undocumented and unimplemented changes surfaced.
 
-- :material-radar:{ .lg .middle } **Anomaly Detection Engine**
-
-    ---
-
-    Perf-Xi gains a third mode: ingest results, APM and infra metrics for correlated root-cause analysis, prioritised recommendations and a health score.
-
-- :material-record-circle:{ .lg .middle } **Perf-Xi Recording Studio**
+- :material-web-check:{ .lg .middle } **Perf-Xi Frontend Analyzer**
 
     ---
 
-    Capture a live user journey directly and convert it into a JMeter, k6, Gatling or Locust script bundle.
+    Crawl a live application — or browse it yourself — and get Web Vitals scores and 23 frontend anti-pattern checks, with no scripts required.
 
-- :material-format-list-checks:{ .lg .middle } **CaseGeni test-design uplift**
+- :material-api:{ .lg .middle } **Auto-PlayPilot API automation**
 
     ---
 
-    Step-specific expected results, configurable story and AC limits, ADA test cases, and Excel/CSV exports that survive contact with a spreadsheet.
+    Generate UI, API or combined suites — Selenium + Rest Assured, Playwright UI + API, and Playwright Java with Cucumber BDD — plus a readable per-step report.
+
+- :material-eye-check:{ .lg .middle } **Visual Xi, more precise**
+
+    ---
+
+    Deterministic Figma-to-page element matching, causes reported instead of symptoms, image-content scoring and manual Adjust Image.
+
+- :material-file-document-check:{ .lg .middle } **DeepSpeci coverage uplift**
+
+    ---
+
+    Structure recovered from unbulleted pastes, acceptance criteria scaled to source complexity, and every figure in the source preserved.
+
+- :material-server-network:{ .lg .middle } **No containers needed**
+
+    ---
+
+    PostgreSQL, Neo4j and ZAP now install natively — Podman is gone from the setup.
 
 </div>
 
 <div class="band__cta" markdown>
-[Read full July 2026 notes](releases/2026-07.md){ .md-button .md-button--primary }
+[Read October 2026 notes](releases/2026-10.md){ .md-button .md-button--primary }
+[September](releases/2026-09.md){ .md-button }
+[August](releases/2026-08.md){ .md-button }
 </div>
 
 </div>
@@ -252,7 +266,7 @@ flowchart LR
 
     ---
 
-    Turns a change request into ranked impacted tests, coverage gaps and new tests.
+    Turns a change request into ranked impacted tests, coverage gaps and new tests — and compares repos and PRs.
 
 </div>
 
@@ -274,7 +288,7 @@ flowchart LR
 
     ---
 
-    Load-test plan synthesis and bottleneck explanation.
+    Workload modelling, script generation, anomaly root-cause analysis and frontend Web Vitals audits.
 
 - :material-gamepad-variant:{ .lg .middle } **[Game-Xi](agents/game-xi.md)**
 

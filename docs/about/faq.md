@@ -22,11 +22,11 @@ Yes. Every agent is an independent service. You can run, say, just Accessibility
 
 ### Can I self-host?
 
-Yes — `install.sh` provisions Python venvs, npm installs, Playwright browsers, and three Podman containers (PostgreSQL, PostgreSQL with pgvector, and Neo4j). `make dev` (or `bash dev.sh`) starts everything. It also runs under Git Bash on Windows.
+Yes — `install.sh` provisions Python venvs, npm installs, Playwright browsers, and installs PostgreSQL (with pgvector), Neo4j and OWASP ZAP natively — no containers required. `make dev` (or `bash dev.sh`) starts everything. It also runs under Git Bash on Windows.
 
 ### What are the prerequisites?
 
-Python 3.10+ (the platform is aligned on 3.14), Node.js 22+, npm 9+, and Podman 4.0+ for the database containers. Tesseract OCR is optional, for document parsing in DeepSpeci.
+Python 3.10+ (the platform is aligned on 3.14), and Node.js 22+. PostgreSQL 16, Neo4j 5 and ZAP are installed by `install.sh`. Tesseract OCR is optional, for document parsing in DeepSpeci.
 
 ### What stack is the frontend on?
 

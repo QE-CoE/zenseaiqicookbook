@@ -7,7 +7,7 @@ flowchart TD
   Browser[Browser<br/>Next.js 16 · React 19]
   BE[Common Backend<br/>Express 5 · :3001]
   DB[(PostgreSQL :5432<br/>pipeline_runs<br/>agent_outputs<br/>integrations)]
-  KBDB[(PostgreSQL + pgvector :5433<br/>knowledge chunks)]
+  KBDB[(PostgreSQL + pgvector :5432<br/>knowledge chunks (zenseai_knowledge))]
   NEO[(Neo4j :7687<br/>knowledge graph)]
   Browser -->|Bearer JWT| BE
   BE --> DB
@@ -17,7 +17,7 @@ flowchart TD
   BE --> A3[Auto-PlayPilot :8002]
   BE --> A4[Other Agents :8003]
   BE --> A5[Secure-Xi :8004]
-  BE --> A6[Accessibility :8005]
+  BE --> A6[Accessibility :8016]
   BE --> A7[Game-Xi :8006]
   BE --> A8[DataGeni :8007]
   BE --> A9[Perf-Xi :8008]
@@ -42,7 +42,7 @@ flowchart TD
 | Auto-PlayPilot | `8002` | Node · Express · Playwright |
 | Other Agents (Predictive, Test Optimization, Knowledge Graph) | `8003` | Next.js |
 | Secure-Xi | `8004` | Python · FastAPI |
-| Accessibility Intelligence | `8005` | Node · Express · axe-core |
+| Accessibility Intelligence | `8016` | Node · Express · axe-core |
 | Game-Xi | `8006` | Python · FastAPI |
 | DataGeni | `8007` | Python · FastAPI |
 | Perf-Xi | `8008` | Python · FastAPI |
@@ -58,13 +58,13 @@ flowchart TD
 
 ## Datastores
 
-| Store | Port | Container | Purpose |
+| Store | Port | Database | Purpose |
 |---|---|---|---|
-| PostgreSQL | `5432` | `zenseai-backend-db` | Auth, projects, pipelines, agent outputs, encrypted integrations |
-| PostgreSQL + pgvector | `5433` | `zenseai-knowledge-db` | Knowledge Base embeddings |
-| Neo4j | `7687` | `zenseai-neo4j` | Knowledge Graph persistence |
+| PostgreSQL 16 | `5432` | `zense_ai_qi` | Auth, projects, pipelines, agent outputs, encrypted integrations |
+| PostgreSQL 16 + pgvector | `5432` | `zenseai_knowledge` | Knowledge Base embeddings |
+| Neo4j 5 Community | `7687` | — | Knowledge Graph persistence |
 
-All three are provisioned as Podman containers by `make install`.
+PostgreSQL and Neo4j are installed natively by `make install` — containers (Podman) are no longer used. OWASP ZAP, used by Secure-Xi, is also installed natively.
 
 ## Request flow
 
@@ -83,7 +83,7 @@ Several agents expose more than one flow. The backend routes these through a nam
 | Agent | Modes |
 |---|---|
 | **Auto-PlayPilot** | Framework and Script Generation · Test Script Generation · Test Execution · Test Code Conversion *(not yet enabled)* |
-| **Perf-Xi** | Workload Modeling (greenfield / brownfield) · Script Automation · Anomaly Detection Engine · Journey Identifier · Strategy Document |
+| **Perf-Xi** | Workload Modeling (greenfield / brownfield) · Script Automation · Anomaly Detection Engine · Frontend Analyzer · Journey Identifier · Strategy Document |
 | **Visual Xi** | Single and batch runs · Visual Eyes comparison · AI analysis · reports · ignore regions · cloud devices |
 | **Payments Rail QE** | Scenario generation · conversational mode |
 
