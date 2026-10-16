@@ -398,6 +398,7 @@
 .cat-pill--auto { background: linear-gradient(135deg, #7a35a9, #b558e8); box-shadow: 0 4px 12px rgba(122,53,169,.30); }
 .cat-pill--qi   { background: linear-gradient(135deg, #1c6e54, #2db48a); box-shadow: 0 4px 12px rgba(28,110,84,.30); }
 .cat-pill--spec { background: linear-gradient(135deg, #2a4ec5, #5d80ff); box-shadow: 0 4px 12px rgba(42,78,197,.30); }
+.cat-pill--dev  { background: linear-gradient(135deg, #8a6d00, #d4a800); box-shadow: 0 4px 12px rgba(138,109,0,.30); }
 .cat-pill--plat { background: linear-gradient(135deg, #444, #777); box-shadow: 0 4px 12px rgba(0,0,0,.20); }
 
 /* ============================================================

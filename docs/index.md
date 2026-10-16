@@ -150,11 +150,11 @@ flowchart LR
 
     Structure recovered from unbulleted pastes, acceptance criteria scaled to source complexity, and every figure in the source preserved.
 
-- :material-server-network:{ .lg .middle } **No containers needed**
+- :material-cellphone-link:{ .lg .middle } **[Vantage](agents/vantage.md)**
 
     ---
 
-    PostgreSQL, Neo4j and ZAP now install natively — Podman is gone from the setup.
+    Perform a workflow once on a live web or mobile target and get a ready-to-run test project. Rule-based, with no AI in the loop — repeatable, auditable and free of per-action cost. A developer tool, not a deployed agent.
 
 </div>
 
@@ -335,6 +335,22 @@ flowchart LR
     ---
 
     Quality trends, agent adoption and pipeline efficiency across the lifecycle.
+
+</div>
+
+</div>
+
+<div class="cat-row" markdown>
+
+<span class="cat-pill cat-pill--dev">Developer tooling</span>
+
+<div class="grid cards agents" markdown>
+
+- :material-cellphone-link:{ .lg .middle } **[Vantage](agents/vantage.md)**
+
+    ---
+
+    Records a workflow once on a live web or mobile target and produces a ready-to-run test project. Rule-based, no AI.
 
 </div>
 
